@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  border: 1px solid black;
+  display: flex;
+  padding: 20px 80px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+nav input {
+  width: 100%;
+  padding: 10px 30px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+nav .nav-menu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+nav .nav-menu button {
+  padding: 8px 15px;
+  border-radius: 10px;
+  border: none;
+}
+
+nav .nav-menu .login button {
+  background-color: aqua;
+}
+
+nav .hamburger {
+  display: none;
+}
+
+nav .hamburger i {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    padding: 20px 50px;
+  }
+
+  nav .hamburger {
+    display: flex;
+  }
+
+  .user-input {
+    width: 100vw;
+    position: relative;
+    left: 0;
+    top: 80px;
+  }
+
+  nav input {
+    width: 100%;
+  }
+}
