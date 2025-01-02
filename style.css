@@ -22,6 +22,7 @@ nav input {
   padding: 10px 30px;
   border-radius: 8px;
   border: 1px solid black;
+  outline: none;
 }
 
 nav .nav-menu {
@@ -42,6 +43,7 @@ nav .nav-menu .login button {
 
 nav .hamburger {
   display: none;
+  cursor: pointer;
 }
 
 nav .hamburger i {
@@ -50,6 +52,7 @@ nav .hamburger i {
 
 @media screen and (max-width: 900px) {
   nav {
+    padding: 15px 35px;
     width: 100%;
   }
 
@@ -59,15 +62,21 @@ nav .hamburger i {
 
   .user-input {
     display: flex;
-    background-color: aqua;
     justify-content: center;
     width: 100%;
     position: fixed;
     left: 0;
-    top: 80px;
+    top: 70px;
+    display: none;
+    transition: 0.3s ease-in-out;
+  }
+
+  .user-input.show {
+    display: flex;
   }
 
   nav input {
     width: 95vw;
+    outline: none;
   }
 }
