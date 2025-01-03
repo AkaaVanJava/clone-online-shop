@@ -59,7 +59,7 @@ nav .hamburger i {
 
   .user-input {
     display: flex;
-    background-color: aqua;
+    background-color: aqua;    
     justify-content: center;
     width: 100%;
     position: fixed;
