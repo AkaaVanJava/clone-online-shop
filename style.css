@@ -52,19 +52,27 @@ nav .hamburger i {
 }
 
 .banner {
-  width: 90%;
+  width: 90vw;
+  height: 80vh;
   position: absolute;
-  top: 70px;
+  top: 100px;
   left: 5%;
   overflow: hidden;
   border-radius: 8px;
-}
+} 
+
 
 .wrapper {
-  width: 100%;
   display: flex;
   animation: slide 16s infinite;
+} 
+
+.wrapper img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
 }
+
 
 @keyframes slide {
   0% {
@@ -121,5 +129,14 @@ nav .hamburger i {
   nav input {
     width: 95vw;
     outline: none;
+  }
+
+  .banner {
+    top: 80px;
+  }
+
+  .banner.push {
+    top: 120px;
+    transition: 0.2s ease-in-out;
   }
 }
