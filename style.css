@@ -69,47 +69,6 @@ nav .hamburger i {
   animation: slide 16s infinite;
 }
 
-.wrapper img {
-  width: 100%;
-  flex-shrink: 0;
-  object-fit: cover;
-}
-
-/* Banner END */
-
-/* Product START */
-.product {
-  position: absolute;
-  left: 5%;
-  width: 90vw;
-  top: 630px;
-  overflow: hidden;
-  border: radius 8px;
-}
-
-.product-item {
-  display: grid;
-  grid-template-columns: repeat(3, 25%);
-  justify-content: space-between;
-}
-
-.card {
-  width: 100%;
-  height: 70px;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 2px solid black;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.card img {
-  width: 100%;
-  line-height: 0;
-}
-
 @keyframes slide {
   0% {
     transform: translateX(0);
@@ -136,6 +95,53 @@ nav .hamburger i {
     transform: translateX(-300%);
   }
 }
+
+.wrapper img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Banner END */
+
+/* Product START */
+.product {
+  position: absolute;
+  left: 5%;
+  width: 90vw;
+  top: 630px;
+  overflow: hidden;
+  border: radius 8px;
+}
+
+.product-item {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: space-between;
+}
+
+.card {
+  width: 100%;
+  padding: 5px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid black;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product-img {
+  line-height: 0;
+}
+
+.card img {
+  width: 80px;
+  border-radius: 5px;
+}
+
+
 
 @media screen and (max-width: 900px) {
   nav {
@@ -174,5 +180,58 @@ nav .hamburger i {
   .banner.push {
     top: 120px;
     transition: 0.2s ease-in-out;
+  }
+
+
+}
+
+/* Tablet Responsive */
+@media screen and (max-width: 768px) {
+  .product {
+    top: 550px;
+  }
+
+  .product-item {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
+  }
+
+  .product-dec {
+    font-size: 11px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card img {
+    width: 65px;
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 576px) {
+  .product {
+    top: 400px;
+  }
+
+  .product-item {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .product-dec {
+    font-size: 12px;
+  }
+
+  .card {
+    width: 95%;
+  }
+
+  .card img {
+    width: 65px;
   }
 }
