@@ -36,13 +36,15 @@ nav .nav-menu {
 }
 
 nav .nav-menu button {
-  padding: 8px 15px;
+  padding: 8px 10px;
   border-radius: 10px;
   border: none;
+  cursor: pointer;
 }
 
 nav .nav-menu .login button {
   background-color: aqua;
+  margin-left: 10px;
 }
 
 nav .hamburger {
@@ -57,8 +59,10 @@ nav .hamburger i {
 /* Banner Start */
 
 .banner {
+  background-color: aqua;
   margin: 90px auto 10px auto;
   width: 90vw;
+  height: 85vh;
   overflow: hidden;
   border-radius: 8px;
 }
@@ -99,6 +103,7 @@ nav .hamburger i {
   width: 100%;
   flex-shrink: 0;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 /* Banner END */
@@ -128,6 +133,7 @@ nav .hamburger i {
   align-items: center;
   margin-bottom: 10px;
   transition: .3s all;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -143,6 +149,56 @@ nav .hamburger i {
   width: 80px;
   border-radius: 5px;
 }
+
+/* List Menu */
+.list-menu {
+  width: 90vw;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.list-menu button {
+  width: 10vw;
+  padding: 10px 0px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  background-color: rgb(236, 234, 234);
+}
+/* List Menu End */
+
+/* Product Lanjutan */
+.container-product {
+  width: 90vw;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+
+.card-product {
+  overflow: hidden;
+  background-color: rgb(236, 234, 234);
+  width: 220px;
+  border-radius: 8px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.card-product:hover {
+  transform: rotate(3deg) scale(1.05);
+  border: 2px solid black;
+}
+
+.info {
+  padding: 10px;
+}
+/* Product Lanjutan End */
 
 @media screen and (max-width: 900px) {
   nav {
@@ -174,14 +230,25 @@ nav .hamburger i {
     outline: none;
   }
 
+  .banner {
+    height: 80vh;
+  }
+
   .banner.push {
     margin-top: 125px;
     transition: 0.2s ease-in-out;
+  }
+
+  .list-menu button {
+    width: 15vw;
   }
 }
 
 /* Tablet Responsive */
 @media screen and (max-width: 768px) {
+  .banner {
+    height: 70vh;
+  }
   .product {
     top: 550px;
   }
@@ -203,10 +270,17 @@ nav .hamburger i {
   .card img {
     width: 65px;
   }
+
+  .description {
+    width: 100%;
+  }
 }
 
 /* Mobile Responsive */
 @media screen and (max-width: 576px) {
+  .banner {
+    height: 45vh;
+  }
   .product-item {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -224,5 +298,17 @@ nav .hamburger i {
 
   .card img {
     width: 65px;
+  }
+
+  .list-menu button {
+    width: 20vw;
+  }
+
+  .card-product {
+    width: 132px;
+  }
+
+  .info {
+    font-size: 13px;
   }
 }
