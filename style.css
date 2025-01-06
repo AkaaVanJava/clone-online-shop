@@ -364,7 +364,6 @@ nav .hamburger i {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  
   .profil:first-child {
     grid-column: span 2;
   }
