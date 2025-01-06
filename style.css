@@ -59,10 +59,8 @@ nav .hamburger i {
 /* Banner Start */
 
 .banner {
-  background-color: aqua;
   margin: 90px auto 10px auto;
   width: 90vw;
-  height: 85vh;
   overflow: hidden;
   border-radius: 8px;
 }
@@ -183,6 +181,7 @@ nav .hamburger i {
   width: 90vw;
   margin: 20px auto;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 2vw;
 }
@@ -207,9 +206,10 @@ nav .hamburger i {
 /* Product Lanjutan End */
 
 .footer {
-  padding: 0 70px;
+  padding: 0 30px;
   display: grid;
-  grid-template-columns: repeat(4, 20%);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
   justify-content: space-between;
 }
 
@@ -282,13 +282,14 @@ nav .hamburger i {
   .list-menu button {
     width: 15vw;
   }
-}
 
-.footer {
-  padding: 0 70px;
-  display: grid;
-  grid-template-columns: repeat(4, 20%);
-  justify-content: space-between;
+  .footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .profil:first-child {
+    grid-column: span 3;
+  }
 }
 
 /* Tablet Responsive */
@@ -357,5 +358,14 @@ nav .hamburger i {
 
   .info {
     font-size: 13px;
+  }
+
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  
+  .profil:first-child {
+    grid-column: span 2;
   }
 }
